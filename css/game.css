@@ -1,0 +1,176 @@
+/* Background color */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: radial-gradient(circle at top, #1f7a3a, #0f3d1f);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+/* LOGIN BUTTON */
+#loginForm button,
+.login-btn {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: all 0.25s ease;
+}
+
+/* HOVER */
+#loginForm button:hover,
+.login-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.65);
+}
+
+/* ACTIVE (click) */
+#loginForm button:active,
+.login-btn:active {
+    transform: scale(0.98);
+}
+
+
+/*image cards */
+.card-img {
+    width: 110px;
+    margin: 6px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.card-btn:hover .card-img {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.65);
+}
+
+#turn {
+    font-weight: bold;
+    color: #ffd700; 
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+}
+
+
+/*logout button*/
+#logout_btn {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 25px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+#logout_btn:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    transform: translateY(-2px) scale(1.05);
+}
+
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.score {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 12px 25px;
+    border-radius: 14px;
+    font-size: 18px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+.score span {
+    display: block;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.score strong {
+    font-size: 26px;
+}
+
+p:has(#turn) {
+    background: rgba(0, 0, 0, 0.35);
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 10px;
+}
+
+.game-btn {
+    border: none;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin: 14px auto;
+    display: block;
+}
+
+
+/*restart button */
+#restart_btn {
+    background: linear-gradient(135deg, #f1c40f, #d4ac0d);
+    color: #1f3d1f;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    margin-top: 25px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.55);
+    transition: all 0.25s ease;
+}
+
+#restart_btn:hover {
+    background: linear-gradient(135deg, #f9e79f, #f1c40f);
+    transform: translateY(-2px) scale(1.05);
+}
+
+
+#waiting_msg {
+    color: #f1c40f; 
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    text-shadow: 0 0 6px rgba(241, 196, 15, 0.6);
+}
+
+#message{
+    color: red; 
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    text-shadow: 0 0 6px  #e74c3c;
+}

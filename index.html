@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Υλοποίηση του παιχνιδιού ΞΕΡΗ">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/game.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <link rel="stylesheet" href="css/game.css">
+    <title>ΞΕΡΗ</title>
+</head>
+<body>
+
+<h1>ΞΕΡΗ LIVE</h1>
+
+<div id="login_area">
+    <form id="loginForm">
+        <label>
+            Username:
+            <input type="text" name="username" required>
+        </label>
+
+        <br><br>
+
+        <label>
+            Ρόλος:
+            <select name="player_id" required>
+                <option value="">-- Επιλογή --</option>
+                <option value="P1"> P1</option>
+                <option value="P2"> P2</option>
+            </select>
+        </label>
+
+        <br><br>
+        <button  type="submit"  class="login-btn">Σύνδεση</button>
+    </form>
+</div>
+
+<hr>
+
+
+<div id="game_area" style="display:none">
+
+    <div id="scoreboard">
+        <div class="score p1">
+            <span>P1</span>
+            <strong id="p1_score">0</strong>
+        </div>
+    
+        <div class="score p2">
+            <span>P2</span>
+            <strong id="p2_score">0</strong>
+        </div>
+    </div>
+
+    <p>Είσαι ο παίκτης: <strong id="current_player"></strong></p>
+
+    <p>Σειρά: <span id="turn">-</span></p>
+    <p>Κατάσταση: <span id="status">-</span></p>
+    <p id="waiting_msg" >
+        Waiting for another player...
+    </p>
+    
+    <p id="message"></p>
+
+    <h3>Τραπέζι</h3>
+    <div id="table_cards"></div>
+
+    <h3>Τα χαρτιά σου</h3>
+    <div id="hand_cards"></div>
+
+    <h3>Τα μαζεμένα σου</h3>
+    <div id="captured_cards"></div>
+
+    <button type="submit" id='logout_btn'> Έξοδος </button>
+</div>
+
+
+
+</body>
+</html>
