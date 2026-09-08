@@ -10,16 +10,28 @@ $user = $env['DB_USER'];
 $pass = $env['DB_PASS'];
 $host = $env['DB_HOST'];
 $db   = $env['DB_NAME'];
+$socket = $env['DB_SOCKET'] ?? null;
 
+if (gethostname() == 'users.iee.ihu.gr' && $socket) {
 
-if(gethostname()=='users.iee.ihu.gr') {
-	$mysqli = new mysqli($host, $user, $pass, $db,null,'/home/student/iee/2021/iee2021034/mysql/run/mysql.sock');
+    $mysqli = new mysqli(
+        $host,
+        $user,
+        $pass,
+        $db,
+        null,
+        $socket
+    );
+
 } else {
-		//$pass=null;
+
     $mysqli = new mysqli($host, $user, $pass, $db);
 }
 
 if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . 
-    $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}?>
+    echo "Failed to connect to MySQL: (" .
+        $mysqli->connect_errno . ") " .
+        $mysqli->connect_error;
+}
+
+?>
