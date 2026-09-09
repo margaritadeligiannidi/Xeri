@@ -7,7 +7,8 @@
 
 ## Γραφικό Περιβάλλον
 
-![Xeri Game Interface](images/xeri-ui.png)
+![Xeri Game Interface](images/ui1.png)
+![Xeri Game Interface](images/ui2.png)
 
 Το γραφικό περιβάλλον λειτουργεί ως client του API και επικοινωνεί με το backend μέσω JSON αιτημάτων.
 
